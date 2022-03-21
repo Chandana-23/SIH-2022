@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<div class="container d-block text-center mt-5">
+    <h1>Apply here!</h1>
+    <form action="applied" method="post">
+        <input type="email" class="form-control p-2 mb-3" name="email" id="email" placeholder="Enter your mail id">
+        <select name="job" id="job" class="p-2 mb-3 custom-select form-control">
+            {% for j in jobs %}
+                <option value="{{j.job_id}}">{{j.job_name}}</option>
+            {% endfor %}
+        </select>
+        <input class="btn btn-success" type="submit" value="Apply">
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}

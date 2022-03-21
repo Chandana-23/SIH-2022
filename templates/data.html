@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Qualification</th>
+            <th>Designation</th>
+            <th>Current Status</th>
+        </tr>
+    </thead>
+<tbody>
+{% for d in data %}
+<tr>
+<td>{{forloop.counter}}</td>
+<td>{{d.name}}</td>
+<td>{{d.age}}</td>
+<td>{{d.qualification}}</td>
+<td>{{d.designation}}</td>
+<td>{{d.status}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+
+
+
+<div class="container d-block text-center mt-5">
+    <h3>Check out the latest job offers...</h3>
+    {% for n in notifications %}
+        <a class=" text-decoration-none" download href="{{n.document.url}}">{{n.description}}</a>
+        <blockquote>{{n.posted}}</blockquote>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}
